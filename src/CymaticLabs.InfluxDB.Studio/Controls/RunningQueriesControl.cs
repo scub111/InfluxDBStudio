@@ -121,7 +121,7 @@ namespace CymaticLabs.InfluxDB.Studio.Controls
 
         #endregion User Interface
 
-        public async override Task ExecuteRequestAsync()
+        public async override Task ExecuteRequestAsync(bool updateGrid = true)
         {
             if (InfluxDbClient == null) throw new Exception("No InfluxDB client available.");
 

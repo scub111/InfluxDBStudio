@@ -277,7 +277,7 @@ namespace CymaticLabs.InfluxDB.Studio.Controls
         /// <summary>
         /// Runs the current query against the configured connection and database.
         /// </summary>
-        public override async Task ExecuteRequestAsync()
+        public override async Task ExecuteRequestAsync(bool updateGrid = true)
         {
             if (InfluxDbClient == null) throw new Exception("No InfluxDB client available.");
 

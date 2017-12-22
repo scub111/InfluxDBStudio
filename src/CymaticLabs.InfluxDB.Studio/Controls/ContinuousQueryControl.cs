@@ -254,7 +254,7 @@ namespace CymaticLabs.InfluxDB.Studio.Controls
 
         #endregion Utility
 
-        public async override Task ExecuteRequestAsync()
+        public async override Task ExecuteRequestAsync(bool updateGrid = true)
         {
             try
             {

@@ -55,6 +55,7 @@
             this.dateFormatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dateFormatComboBox = new System.Windows.Forms.ToolStripComboBox();
             this.allowUntrustedSSLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.updateQueryGridToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.imageList = new System.Windows.Forms.ImageList(this.components);
@@ -82,6 +83,8 @@
             this.showSeriesButton = new System.Windows.Forms.ToolStripButton();
             this.dropSeriesButton = new System.Windows.Forms.ToolStripButton();
             this.dropMeasurementButton = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.updateGridButton = new System.Windows.Forms.ToolStripButton();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.statusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.splitContainer = new System.Windows.Forms.SplitContainer();
@@ -255,7 +258,8 @@
             this.settingsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.timeFormatToolStripMenuItem,
             this.dateFormatToolStripMenuItem,
-            this.allowUntrustedSSLToolStripMenuItem});
+            this.allowUntrustedSSLToolStripMenuItem,
+            this.updateQueryGridToolStripMenuItem});
             this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
             this.settingsToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.settingsToolStripMenuItem.Text = "Settings";
@@ -308,6 +312,13 @@
             this.allowUntrustedSSLToolStripMenuItem.Text = "Allow Untrusted SSL";
             this.allowUntrustedSSLToolStripMenuItem.CheckedChanged += new System.EventHandler(this.allowUntrustedSSLToolStripMenuItem_CheckedChanged);
             // 
+            // updateQueryGridToolStripMenuItem
+            // 
+            this.updateQueryGridToolStripMenuItem.CheckOnClick = true;
+            this.updateQueryGridToolStripMenuItem.Name = "updateQueryGridToolStripMenuItem";
+            this.updateQueryGridToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.updateQueryGridToolStripMenuItem.Text = "Update Query Grid";
+            // 
             // helpToolStripMenuItem
             // 
             this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -357,7 +368,9 @@
             this.fieldKeysButton,
             this.showSeriesButton,
             this.dropSeriesButton,
-            this.dropMeasurementButton});
+            this.dropMeasurementButton,
+            this.toolStripSeparator4,
+            this.updateGridButton});
             this.toolStrip.Location = new System.Drawing.Point(0, 24);
             this.toolStrip.Name = "toolStrip";
             this.toolStrip.Size = new System.Drawing.Size(784, 25);
@@ -593,6 +606,24 @@
             this.dropMeasurementButton.Text = "dropMeasurementButton";
             this.dropMeasurementButton.ToolTipText = "Drop Measurement";
             this.dropMeasurementButton.Click += new System.EventHandler(this.dropMeasurementButton_Click);
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 25);
+            // 
+            // updateGridButton
+            // 
+            this.updateGridButton.Checked = true;
+            this.updateGridButton.CheckOnClick = true;
+            this.updateGridButton.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.updateGridButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.updateGridButton.Image = global::CymaticLabs.InfluxDB.Studio.Properties.Resources.Table;
+            this.updateGridButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.updateGridButton.Name = "updateGridButton";
+            this.updateGridButton.Size = new System.Drawing.Size(23, 22);
+            this.updateGridButton.Text = "toolStripButton1";
+            this.updateGridButton.ToolTipText = "Update Grid";
             // 
             // statusStrip
             // 
@@ -1029,6 +1060,9 @@
         private System.Windows.Forms.ToolStripMenuItem closeTabMenuItem;
         private System.Windows.Forms.ToolStripMenuItem closeAllButThisMenuItem;
         private System.Windows.Forms.ToolStripMenuItem closeAllMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem updateQueryGridToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
+        private System.Windows.Forms.ToolStripButton updateGridButton;
     }
 }
 

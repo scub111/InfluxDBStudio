@@ -47,7 +47,7 @@ namespace CymaticLabs.InfluxDB.Studio.Controls
         /// <summary>
         /// When overriden in derived classes, executes an InfluxDB API request and processes the result.
         /// </summary>
-        public virtual async Task ExecuteRequestAsync() { }
+        public virtual async Task ExecuteRequestAsync(bool updateGrid = true) { }
 
         #endregion Methods
     }

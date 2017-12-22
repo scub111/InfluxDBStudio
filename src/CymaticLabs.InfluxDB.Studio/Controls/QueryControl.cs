@@ -61,7 +61,7 @@ namespace CymaticLabs.InfluxDB.Studio.Controls
         /// <summary>
         /// Runs the current query against the configured connection and database.
         /// </summary>
-        public override async Task ExecuteRequestAsync()
+        public override async Task ExecuteRequestAsync(bool updateGrid)
         {
             if (InfluxDbClient == null) throw new Exception("No InfluxDB client available.");
 
@@ -92,21 +92,26 @@ namespace CymaticLabs.InfluxDB.Studio.Controls
 
                 foreach (var result in results)
                 {
-                    // Create a new tab page to hold the query results control
-                    var tab = new TabPage(string.Format("{0} {1}", tabLabel, ++tabCount));
+                    if (updateGrid)
+                    {
+                        // Create a new tab page to hold the query results control
+                        var tab = new TabPage(string.Format("{0} {1}", tabLabel, ++tabCount));
 
-                    // Create a new query results control
-                    var queryResultsControl = new QueryResultsControl();
-                    queryResultsControl.InfluxDbClient = InfluxDbClient;
-                    queryResultsControl.Database = Database;
-                    queryResultsControl.Dock = DockStyle.Fill;
-                    tab.Controls.Add(queryResultsControl);
+                        // Create a new query results control
+                        var queryResultsControl = new QueryResultsControl();
+                        queryResultsControl.InfluxDbClient = InfluxDbClient;
+                        queryResultsControl.Database = Database;
+                        queryResultsControl.Dock = DockStyle.Fill;
+                        tab.Controls.Add(queryResultsControl);
 
-                    // Add the tab to the control
-                    tabControl.TabPages.Add(tab);
+                        // Add the tab to the control
+                        tabControl.TabPages.Add(tab);
 
-                    // Render the results and increment the global total
-                    resultsCount += queryResultsControl.UpdateResults(result);
+                        // Render the results and increment the global total
+                        resultsCount += queryResultsControl.UpdateResults(result);
+                    }
+                    else
+                        resultsCount += result.Values.Count;
                 }
             }
 

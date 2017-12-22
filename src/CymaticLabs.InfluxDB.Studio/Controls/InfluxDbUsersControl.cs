@@ -448,7 +448,7 @@ namespace CymaticLabs.InfluxDB.Studio.Controls
 
         #region Request
 
-        public async override Task ExecuteRequestAsync()
+        public async override Task ExecuteRequestAsync(bool updateGrid = true)
         {
             usersListView.BeginUpdate();
             usersListView.Items.Clear();

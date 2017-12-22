@@ -583,7 +583,10 @@
     <None Include="Resources\ImagesFinal\RetentionPolicy.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\ImagesFinal\Table.png" />
     <Content Include="Resources\RP_Duration_Info.txt" />
+    <None Include="Resources\table.png" />
+    <None Include="Resources\table.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />

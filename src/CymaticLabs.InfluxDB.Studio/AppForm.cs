@@ -1550,7 +1550,7 @@ namespace CymaticLabs.InfluxDB.Studio
                 }
 
                 if (requestControl == null) return;
-                await requestControl.ExecuteRequestAsync();
+                await requestControl.ExecuteRequestAsync(updateGridButton.Checked);
             }
             catch (Exception ex)
             {
