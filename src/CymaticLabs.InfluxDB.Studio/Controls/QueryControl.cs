@@ -77,6 +77,7 @@ namespace CymaticLabs.InfluxDB.Studio.Controls
 
             // Start timing...
             stopWatch.Restart();
+            resultsLabel.Text = @"Request...";
 
             // Execute the query
             var results = await InfluxDbClient.QueryAsync(Database, query);
@@ -85,7 +86,7 @@ namespace CymaticLabs.InfluxDB.Studio.Controls
             stopWatch.Stop();
 
             // If there are results
-            if (results != null && results.Count() > 0)
+            if (results != null && results.Any())
             {
                 var tabCount = 0;
                 var tabLabel = isAggregate ? "Group" : "Results";
@@ -116,7 +117,7 @@ namespace CymaticLabs.InfluxDB.Studio.Controls
             }
 
             // Show stat results of query
-            resultsLabel.Text = string.Format("results: {0}, response time: {1:0} ms", resultsCount, stopWatch.Elapsed.TotalMilliseconds);
+            resultsLabel.Text = $@"results: {resultsCount}, response time: {stopWatch.Elapsed.TotalMilliseconds:0} ms";
         }
 
         #endregion Methods

@@ -142,7 +142,7 @@
             this.helpToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Size = new System.Drawing.Size(784, 24);
+            this.menuStrip.Size = new System.Drawing.Size(990, 24);
             this.menuStrip.TabIndex = 0;
             this.menuStrip.Text = "menuStrip";
             // 
@@ -206,15 +206,15 @@
             // 
             this.refreshToolStripMenuItem.Image = global::CymaticLabs.InfluxDB.Studio.Properties.Resources.Refresh;
             this.refreshToolStripMenuItem.Name = "refreshToolStripMenuItem";
-            this.refreshToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F5;
-            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
+            this.refreshToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.R)));
+            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.refreshToolStripMenuItem.Text = "Refresh";
             // 
             // manageToolStripMenuItem
             // 
             this.manageToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("manageToolStripMenuItem.Image")));
             this.manageToolStripMenuItem.Name = "manageToolStripMenuItem";
-            this.manageToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
+            this.manageToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.manageToolStripMenuItem.Text = "Manage";
             this.manageToolStripMenuItem.Click += new System.EventHandler(this.manageToolStripMenuItem_Click);
             // 
@@ -232,7 +232,7 @@
             // 
             this.newQueryToolStripMenuItem2.Image = global::CymaticLabs.InfluxDB.Studio.Properties.Resources.NewQuery;
             this.newQueryToolStripMenuItem2.Name = "newQueryToolStripMenuItem2";
-            this.newQueryToolStripMenuItem2.Size = new System.Drawing.Size(146, 22);
+            this.newQueryToolStripMenuItem2.Size = new System.Drawing.Size(152, 22);
             this.newQueryToolStripMenuItem2.Text = "New Query";
             this.newQueryToolStripMenuItem2.Click += new System.EventHandler(this.newQueryToolStripMenuItem2_Click);
             // 
@@ -240,8 +240,8 @@
             // 
             this.runQueryToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("runQueryToolStripMenuItem.Image")));
             this.runQueryToolStripMenuItem.Name = "runQueryToolStripMenuItem";
-            this.runQueryToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.R)));
-            this.runQueryToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.runQueryToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F5;
+            this.runQueryToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.runQueryToolStripMenuItem.Text = "Run";
             this.runQueryToolStripMenuItem.Click += new System.EventHandler(this.runQueryToolStripMenuItem_Click);
             // 
@@ -249,7 +249,7 @@
             // 
             this.showQueriesToolStripMenuItem.Image = global::CymaticLabs.InfluxDB.Studio.Properties.Resources.ShowQueries;
             this.showQueriesToolStripMenuItem.Name = "showQueriesToolStripMenuItem";
-            this.showQueriesToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.showQueriesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.showQueriesToolStripMenuItem.Text = "Show Queries";
             this.showQueriesToolStripMenuItem.Click += new System.EventHandler(this.showQueriesToolStripMenuItem_Click);
             // 
@@ -373,7 +373,7 @@
             this.updateGridButton});
             this.toolStrip.Location = new System.Drawing.Point(0, 24);
             this.toolStrip.Name = "toolStrip";
-            this.toolStrip.Size = new System.Drawing.Size(784, 25);
+            this.toolStrip.Size = new System.Drawing.Size(990, 25);
             this.toolStrip.TabIndex = 2;
             this.toolStrip.Text = "toolStrip1";
             // 
@@ -629,9 +629,9 @@
             // 
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.statusLabel});
-            this.statusStrip.Location = new System.Drawing.Point(0, 540);
+            this.statusStrip.Location = new System.Drawing.Point(0, 670);
             this.statusStrip.Name = "statusStrip";
-            this.statusStrip.Size = new System.Drawing.Size(784, 22);
+            this.statusStrip.Size = new System.Drawing.Size(990, 22);
             this.statusStrip.TabIndex = 3;
             this.statusStrip.Text = "statusStrip1";
             // 
@@ -654,8 +654,8 @@
             // splitContainer.Panel2
             // 
             this.splitContainer.Panel2.Controls.Add(this.tabControl);
-            this.splitContainer.Size = new System.Drawing.Size(784, 491);
-            this.splitContainer.SplitterDistance = 168;
+            this.splitContainer.Size = new System.Drawing.Size(990, 621);
+            this.splitContainer.SplitterDistance = 212;
             this.splitContainer.TabIndex = 4;
             // 
             // connectionsTreeView
@@ -682,7 +682,7 @@
             this.connectionsTreeView.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
             treeNode3});
             this.connectionsTreeView.SelectedImageIndex = 0;
-            this.connectionsTreeView.Size = new System.Drawing.Size(168, 491);
+            this.connectionsTreeView.Size = new System.Drawing.Size(212, 621);
             this.connectionsTreeView.TabIndex = 1;
             this.connectionsTreeView.AfterExpand += new System.Windows.Forms.TreeViewEventHandler(this.connectionsTreeView_AfterExpand);
             this.connectionsTreeView.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.connectionsTreeView_AfterSelect);
@@ -697,7 +697,7 @@
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
             this.tabControl.ShowTabCloseArea = true;
-            this.tabControl.Size = new System.Drawing.Size(612, 491);
+            this.tabControl.Size = new System.Drawing.Size(774, 621);
             this.tabControl.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabControl.TabCloseSpace = 8;
             this.tabControl.TabCloseWidth = 16;
@@ -948,7 +948,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 562);
+            this.ClientSize = new System.Drawing.Size(990, 692);
             this.Controls.Add(this.splitContainer);
             this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.toolStrip);
@@ -956,6 +956,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip;
             this.Name = "AppForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "InfluxDB Studio";
             this.Load += new System.EventHandler(this.AppForm_Load);
             this.menuStrip.ResumeLayout(false);
